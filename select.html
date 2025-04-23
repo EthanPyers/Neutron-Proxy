@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to Orbit Launch Pad! Select your destination from movies, shows, apps, and games for an out-of-this-world experience.">
-    <title>Orbit Launch Pad</title>
+    <meta name="description" content="Welcome to Neutron Launch Pad! Select your destination from movies, shows, apps, and games for a next-gen experience.">
+    <title>Neutron Launch Pad</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background: url('bgg.png') no-repeat center center/cover, 
-                        linear-gradient(135deg, #2b1055, #7597de);
+            background: radial-gradient(circle at center, #0f0c29, #302b63, #24243e);
             color: white;
             height: 100vh;
             display: flex;
@@ -22,7 +21,7 @@
             overflow: hidden;
             position: relative;
         }
-        
+
         body::before {
             content: "";
             position: absolute;
@@ -30,7 +29,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.65);
             z-index: 1;
         }
 
@@ -38,39 +37,42 @@
             text-align: center;
             position: relative;
             z-index: 2;
-            opacity: 0; 
+            opacity: 0;
             transition: opacity 1s ease-in-out;
+            animation: fadeIn 1.2s ease forwards;
         }
 
         h1 {
             font-size: 4rem;
             font-weight: 600;
-            color: #d2b3ff;
-            text-shadow: 0 0 20px rgba(210, 179, 255, 0.8);
+            background: linear-gradient(90deg, #00ffff, #00b3ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 1rem;
         }
 
         .subtitle {
             font-size: 1.5rem;
             margin-bottom: 2rem;
-            color: #c9a8f8;
+            color: #b8eaff;
         }
 
         .icons {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         .icon {
-            background: linear-gradient(135deg, #1e0836, #7a3dd0);
+            background: linear-gradient(135deg, #003b66, #0072ff);
             border-radius: 50%;
             width: 80px;
             height: 80px;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 0 20px rgba(122, 61, 208, 0.6);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             text-decoration: none;
@@ -78,7 +80,7 @@
 
         .icon:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 30px rgba(122, 61, 208, 0.8);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
         }
 
         .icon i {
@@ -89,18 +91,18 @@
         .link {
             margin-top: 2rem;
             font-size: 1rem;
-            color: #9c86df;
+            color: #00e1ff;
             text-decoration: none;
-            border: 1px solid #9c86df;
-            padding: 0.5rem 1rem;
+            border: 1px solid #00e1ff;
+            padding: 0.5rem 1.2rem;
             border-radius: 25px;
             background: transparent;
             transition: all 0.3s ease;
         }
 
         .link:hover {
-            background: #9c86df;
-            color: white;
+            background: #00e1ff;
+            color: #000;
         }
 
         @keyframes fadeIn {
@@ -114,10 +116,6 @@
             }
         }
 
-        .container {
-            animation: fadeIn 1s ease;
-        }
-
         .video-container {
             position: fixed;
             top: 0;
@@ -125,12 +123,13 @@
             width: 100%;
             height: 100%;
             z-index: 3;
-            overflow: hidden; 
+            overflow: hidden;
         }
+
         video {
             width: 100%;
             height: 100%;
-            object-fit: cover; 
+            object-fit: cover;
         }
     </style>
 </head>
@@ -142,52 +141,38 @@
         </video>
     </div>
     <div class="container" id="main-content">
-        <h1>Orbit. <span style="font-size: 1rem;">v1.2.4</span></h1>
+        <h1>Neutron<span style="font-size: 1rem;"> v1.2.4</span></h1>
         <p class="subtitle">Select your destination</p>
         <div class="icons">
-            <a href="search.html" class="icon">
-                <i class="fas fa-globe"></i>
-            </a>
-            <a href="movies.html" class="icon">
-                <i class="fas fa-film"></i>
-            </a>
-            <a href="credits.html" class="icon">
-                <i class="fa-solid fa-handshake-angle"></i>
-            </a>
-            <a href="apps.html" class="icon">
-                <i class="fas fa-th-large"></i>
-            </a>
-            <a href="games.html" class="icon">
-                <i class="fas fa-gamepad"></i>
-            </a>
-            <a href="ai.html" class="icon">
-                <i class="fa-regular fa-paper-plane"></i>
-            </a>
-            <a href="codetester.html" class="icon">
-                <i class="fa-solid fa-code"></i>
-            </a>
+            <a href="search.html" class="icon"><i class="fas fa-globe"></i></a>
+            <a href="movies.html" class="icon"><i class="fas fa-film"></i></a>
+            <a href="credits.html" class="icon"><i class="fa-solid fa-handshake-angle"></i></a>
+            <a href="apps.html" class="icon"><i class="fas fa-th-large"></i></a>
+            <a href="games.html" class="icon"><i class="fas fa-gamepad"></i></a>
+            <a href="ai.html" class="icon"><i class="fa-regular fa-paper-plane"></i></a>
+            <a href="codetester.html" class="icon"><i class="fa-solid fa-code"></i></a>
         </div>
-        <a href="https://playervpn.github.io" class="link">playervpn.github.io</a>
+        <a href="https://ethanpyers.github.io" class="link">ethanpyers.github.io</a>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const videoContainer = document.getElementById('video-container');
             const mainContent = document.getElementById('main-content');
             const trailer = document.getElementById('trailer');
 
             function handleVideoEnd() {
-                videoContainer.style.display = 'none'; 
-                mainContent.style.opacity = 1; 
+                videoContainer.style.display = 'none';
+                mainContent.style.opacity = 1;
             }
 
             if (!localStorage.getItem('videoPlayed')) {
-                trailer.addEventListener('ended', handleVideoEnd); 
-                setTimeout(handleVideoEnd, 12000); 
-                localStorage.setItem('videoPlayed', 'true'); 
+                trailer.addEventListener('ended', handleVideoEnd);
+                setTimeout(handleVideoEnd, 12000);
+                localStorage.setItem('videoPlayed', 'true');
             } else {
-                videoContainer.style.display = 'none'; 
-                mainContent.style.opacity = 1; 
+                videoContainer.style.display = 'none';
+                mainContent.style.opacity = 1;
             }
         });
     </script>
